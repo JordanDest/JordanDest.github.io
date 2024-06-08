@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,8 +17,12 @@ header {
     padding: 10px 20px;
 }
 
+.logo a {
+    display: inline-block;
+}
+
 .logo img {
-    width: 125px;
+    width: 100px;
 }
 
 nav ul {
@@ -36,6 +41,32 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #00aaff;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #00aaff;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
 }
 
 main {
@@ -44,11 +75,16 @@ main {
 }
 
 .hero {
-    background: url('images/hero-background.jpg') no-repeat center center/cover;
-    color: white;
+    background: url('images/hero1-preview.png') no-repeat center center/cover;
+    color: #D3D3D3;
     text-align: center;
     padding: 60px 20px;
     border-radius: 8px;
+    text-shadow: 
+        2px 2px 4px #000000,  /* Bottom-right shadow */
+        -2px -2px 4px #000000,  /* Top-left shadow */
+        2px -2px 4px #000000,  /* Top-right shadow */
+        -2px 2px 4px #000000;  /* Bottom-left shadow */
 }
 
 .hero h1 {
@@ -62,7 +98,7 @@ main {
 }
 
 .hero button {
-    background-color: #001e2a;
+    background-color: #00415a;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -72,7 +108,7 @@ main {
 }
 
 .hero button:hover {
-    background-color: #00415a;
+    background-color: #405e82;
 }
 
 .features {
@@ -135,8 +171,13 @@ main {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
 }
 
 .next {
@@ -145,7 +186,7 @@ main {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dot {
@@ -225,6 +266,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+	z-index:3;
 }
 
 footer .social-media {
@@ -237,8 +279,8 @@ footer .social-media a {
 }
 
 footer .social-media img {
-    width: 34px;
-    height: 30px;
+    width: 28px;
+    height: 24px;
 }
 
 .contact {
@@ -295,8 +337,8 @@ footer .social-media img {
 }
 
 .about .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -332,4 +374,53 @@ footer .social-media img {
     .hero p {
         font-size: 1em;
     }
+}
+
+/* Design Page Specific Styles */
+.designs {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 60px; /* Add this line to increase the bottom margin */
+}
+
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.design-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.design-card:hover {
+    transform: scale(1.05);
+}
+
+.design-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.design-card h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.design-card p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
 }
