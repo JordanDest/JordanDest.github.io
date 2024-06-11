@@ -40,8 +40,6 @@ function showSlidesManual(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-
-
 // Function to pause the slideshow
 function pauseSlideshow() {
     clearInterval(slideInterval);
@@ -111,4 +109,38 @@ document.addEventListener('DOMContentLoaded', () => {
         slideshowContainer.addEventListener("mouseenter", pauseSlideshow);
         slideshowContainer.addEventListener("mouseleave", startSlideshow);
     }
+
+    // Video control functionality for clipTedTalk.mp4
+    const video = document.getElementById('clipTedTalk');
+    const videoControls = document.getElementById('video-controls');
+    const muteButton = document.getElementById('mute-button');
+    const volumeSlider = document.getElementById('volume-slider');
+    let hideControlsTimeout;
+
+    function showControls() {
+        videoControls.style.display = 'flex';
+        clearTimeout(hideControlsTimeout);
+        hideControlsTimeout = setTimeout(() => {
+            videoControls.style.display = 'none';
+        }, 3000);
+    }
+
+    video.addEventListener('click', showControls);
+    video.addEventListener('mouseover', showControls);
+    video.addEventListener('mousemove', showControls);
+
+    muteButton.addEventListener('click', () => {
+        video.muted = !video.muted;
+        muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
+    });
+
+    volumeSlider.addEventListener('input', () => {
+        video.volume = volumeSlider.value;
+    });
+
+    // Set initial volume
+    volumeSlider.value = video.volume;
+
+    // Hide controls initially
+    videoControls.style.display = 'none';
 });
