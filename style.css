@@ -124,6 +124,36 @@ footer .social-media img {
     .hero p {
         font-size: 1em;
     }
+
+    .designs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-section video {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .designs-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Hero Section */
@@ -393,6 +423,18 @@ footer .social-media img {
     margin-bottom: 60px; 
 }
 
+@media (max-width: 768px) {
+    .designs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .design-card p {
+        font-size: 0.9em;
+    }
+}
 .designs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -475,7 +517,6 @@ button:hover {
     display: block;
     margin: 0 auto; /* center the image */
 }
-
 
 /* Brain Scanner Page Specific Styles */
 .brain-scanner {
