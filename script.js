@@ -61,16 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('nav ul');
     const sidebar = document.querySelector('.sidebar');
 
-    console.log('Hamburger:', hamburger);
-    console.log('Nav Menu:', navMenu);
-    console.log('Sidebar:', sidebar);
-
     if (hamburger && navMenu && sidebar) {
         hamburger.addEventListener('click', () => {
-            console.log('Hamburger clicked');
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
-            console.log('Menu state:', navMenu.classList);
 
             // Toggle sidebar
             if (sidebar.style.right === '0px') {
@@ -85,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Slideshow Variables
-let slideIndex = 1;
+let slideIndex = 0;
 let slideInterval;
 
 // Function to show slides
@@ -118,18 +112,10 @@ function startSlideshow() {
 
 // Function to show slides manually
 function showSlidesManual(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    clearInterval(slideInterval);
+    slideIndex = n - 1;
+    showSlides();
+    slideInterval = setInterval(showSlides, 5000);
 }
 
 // Function to pause the slideshow
@@ -141,13 +127,11 @@ function pauseSlideshow() {
 function plusSlides(n) {
     clearInterval(slideInterval);
     showSlidesManual(slideIndex += n);
-    slideInterval = setInterval(showSlides, 5000);
 }
 
 function currentSlide(n) {
     clearInterval(slideInterval);
-    showSlidesManual(slideIndex = n);
-    slideInterval = setInterval(showSlides, 5000);
+    showSlidesManual(n);
 }
 
 // Initialize EmailJS and add event listener for the contact form

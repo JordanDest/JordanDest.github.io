@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+	height: 100%;
     background-color: #f5f5f5;
     min-height: 100vh;
     display: flex;
@@ -79,7 +80,7 @@ footer {
     padding: 10px 0;
     background-color: #001e2a;
     color: #ffffff;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     z-index: 3;
@@ -200,6 +201,8 @@ footer .social-media img {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+	nav { display: none; }
+
 }
 
 @media (max-width: 480px) {
@@ -713,4 +716,88 @@ button:hover {
 
 .video-controls input[type="range"] {
     width: 150px;
+}
+
+
+/* Extra mobile styles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+	
+	.features {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+	
+	 .testimonials {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.8em;
+    }
+
+    .testimonials blockquote {
+        font-size: 1em;
+    }
+	
+	button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+	
+	.features {
+       margin: 15px 5px;
+       padding: 5px;
+	 }
+	 
+	 .testimonials {
+        margin: 10px 5px;
+        padding: 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5em;
+    }
+
+    .testimonials blockquote {
+        font-size: 0.9em;
+    }
+	
+	button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
 }
