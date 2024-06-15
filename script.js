@@ -1,3 +1,89 @@
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Document loaded');
+
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined') {
+        initializeEmailJS();
+    } else {
+        console.error("EmailJS library not loaded");
+    }
+
+    // Start the slideshow
+    startSlideshow();
+
+    // Slideshow container event listeners for pausing on hover
+    const slideshowContainer = document.querySelector(".slideshow-container");
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener("mouseenter", pauseSlideshow);
+        slideshowContainer.addEventListener("mouseleave", startSlideshow);
+    }
+
+    // Video control functionality for clipTedTalk.mp4
+    const video = document.getElementById('clipTedTalk');
+    const videoControls = document.getElementById('video-controls');
+    const muteButton = document.getElementById('mute-button');
+    const volumeSlider = document.getElementById('volume-slider');
+    let hideControlsTimeout;
+
+    function showControls() {
+        videoControls.style.display = 'flex';
+        clearTimeout(hideControlsTimeout);
+        hideControlsTimeout = setTimeout(() => {
+            videoControls.style.display = 'none';
+        }, 3000);
+    }
+
+    if (video && videoControls) {
+        video.addEventListener('click', showControls);
+        video.addEventListener('mouseover', showControls);
+        video.addEventListener('mousemove', showControls);
+
+        muteButton.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
+        });
+
+        volumeSlider.addEventListener('input', () => {
+            video.volume = volumeSlider.value;
+        });
+
+        // Set initial volume
+        volumeSlider.value = video.volume;
+
+        // Hide controls initially
+        videoControls.style.display = 'none';
+    } else {
+        console.error('Video or video controls not found');
+    }
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    const sidebar = document.querySelector('.sidebar');
+
+    console.log('Hamburger:', hamburger);
+    console.log('Nav Menu:', navMenu);
+    console.log('Sidebar:', sidebar);
+
+    if (hamburger && navMenu && sidebar) {
+        hamburger.addEventListener('click', () => {
+            console.log('Hamburger clicked');
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            console.log('Menu state:', navMenu.classList);
+
+            // Toggle sidebar
+            if (sidebar.style.right === '0px') {
+                sidebar.style.right = '-250px'; // Hide sidebar
+            } else {
+                sidebar.style.right = '0px'; // Show sidebar
+            }
+        });
+    } else {
+        console.error('Hamburger, navMenu, or sidebar not found');
+    }
+});
+
 // Slideshow Variables
 let slideIndex = 1;
 let slideInterval;
@@ -6,6 +92,12 @@ let slideInterval;
 function showSlides() {
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
+
+    if (slides.length === 0 || dots.length === 0) {
+        console.error("Slides or dots not found");
+        return;
+    }
+
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -95,52 +187,3 @@ function initializeEmailJS() {
             });
     });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize EmailJS
-    initializeEmailJS();
-
-    // Start the slideshow
-    startSlideshow();
-
-    // Slideshow container event listeners for pausing on hover
-    const slideshowContainer = document.querySelector(".slideshow-container");
-    if (slideshowContainer) {
-        slideshowContainer.addEventListener("mouseenter", pauseSlideshow);
-        slideshowContainer.addEventListener("mouseleave", startSlideshow);
-    }
-
-    // Video control functionality for clipTedTalk.mp4
-    const video = document.getElementById('clipTedTalk');
-    const videoControls = document.getElementById('video-controls');
-    const muteButton = document.getElementById('mute-button');
-    const volumeSlider = document.getElementById('volume-slider');
-    let hideControlsTimeout;
-
-    function showControls() {
-        videoControls.style.display = 'flex';
-        clearTimeout(hideControlsTimeout);
-        hideControlsTimeout = setTimeout(() => {
-            videoControls.style.display = 'none';
-        }, 3000);
-    }
-
-    video.addEventListener('click', showControls);
-    video.addEventListener('mouseover', showControls);
-    video.addEventListener('mousemove', showControls);
-
-    muteButton.addEventListener('click', () => {
-        video.muted = !video.muted;
-        muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
-    });
-
-    volumeSlider.addEventListener('input', () => {
-        video.volume = volumeSlider.value;
-    });
-
-    // Set initial volume
-    volumeSlider.value = video.volume;
-
-    // Hide controls initially
-    videoControls.style.display = 'none';
-});

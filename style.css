@@ -99,60 +99,112 @@ footer .social-media img {
     height: 24px;
 }
 
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #001e2a;
+    z-index: 1500;
+    transition: right 0.5s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    height: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+	position: relative;
+    transition: color 0.2s ease;
+}
+.sidebar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #00aaff;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.sidebar ul li a:hover::after {
+    width: 50%;
+    left: 0;
+    background: #00aaff;
+}
+.sidebar ul li a:hover {
+    color: #00aaff;
+}
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Ensures the hamburger menu is completely hidden on larger screens */
+    }
+}
+/* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
-    .logo img {
-        width: 80px;
-    }
-
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: none; /* Hide full-screen nav menu on small screens */
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .sidebar {
+        display: block; /* Ensure sidebar is usable on small screens */
+    }
+    
+    .hamburger {
+        display: block; /* Ensure hamburger icon is visible */
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1501;
+        background-color: transparent; /* No background color to avoid visual issues */
+        border: none;
     }
 
-    .hero {
-        padding: 40px 20px;
+    .hamburger .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .hero h1 {
-        font-size: 2em;
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
     }
 
-    .hero p {
-        font-size: 1em;
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
     }
 
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
     .designs-grid {
         grid-template-columns: 1fr;
-    }
-
-    .video-section video {
-        width: 100%;
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    nav ul {
-        padding: 0;
-    }
-
-    .hero h1 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
+    .design-card p {
         font-size: 0.9em;
-    }
-
-    .designs-grid {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -386,7 +438,7 @@ footer .social-media img {
 .about {
     max-width: 800px;
     margin: 40px auto;
-    background-color: rgba(0, 30, 42, 0.8); /* Slightly transparent background */
+    background-color: rgba(0, 30, 42, 0.8);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -423,6 +475,13 @@ footer .social-media img {
     margin-bottom: 60px; 
 }
 
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .designs-grid {
         grid-template-columns: 1fr;
@@ -434,12 +493,6 @@ footer .social-media img {
     .design-card p {
         font-size: 0.9em;
     }
-}
-.designs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
 }
 
 .design-card {
@@ -482,6 +535,7 @@ footer .social-media img {
     justify-content: center;
     align-items: center;
 }
+
 /* General button styles */
 button {
     background-color: #00415a;
@@ -511,6 +565,7 @@ button:hover {
 .design-card button:hover {
     background-color: #405e82;
 }
+
 .small-img {
     max-width: auto%; /* or any other size you prefer */
     height: 20%;
