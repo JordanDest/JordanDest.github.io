@@ -217,9 +217,11 @@ header.site-header {
    screen sizes. On small screens the burger button toggles
    its visibility by adding the .open class. */
 .drawer {
+  /* Off‑canvas drawer for mobile navigation. On small screens it spans
+     the full width to avoid overlapping with page content. */
   position: fixed;
   inset: 0 0 0 auto;
-  width: min(84vw, 320px);
+  width: min(100vw, 320px);
   background: linear-gradient(
       180deg,
       rgba(5, 20, 36, 0.98),
@@ -252,6 +254,12 @@ header.site-header {
   gap: 0.75rem;
   align-items: center;
 }
+
+/* Ensure all social icons in the mobile drawer share the same size */
+.drawer .social img {
+  width: 24px;
+  height: 24px;
+}
 @media (max-width: 900px) {
   .nav {
     display: none;
@@ -259,11 +267,11 @@ header.site-header {
   .burger {
     display: inline-flex;
   }
-  /* On small screens the nav is hidden and the burger
-     appears. The drawer width is constrained to 84vw or
-     320px. */
+  /* On small screens the nav is hidden and the burger appears.
+     Let the drawer take the full viewport width (up to 320px)
+     so that it doesn't overlap content on very narrow devices. */
   .drawer {
-    width: min(84vw, 320px);
+    width: min(100vw, 320px);
   }
 }
 
@@ -474,6 +482,34 @@ header.site-header {
 .carousel-track::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Responsive adjustments for hero on small screens ---------- */
+@media (max-width: 900px) {
+  /* Stack hero content vertically and ensure spacing on narrow devices */
+  .hero .container.grid {
+    grid-template-columns: 1fr !important;
+    align-items: stretch;
+  }
+  .hero-card {
+    margin-bottom: var(--space-5);
+    text-align: center;
+  }
+  .hero-bg {
+    min-height: 240px;
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* Further reduce hero typography on very small screens to avoid overlapping */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: var(--fs-700);
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: var(--fs-400);
+  }
 }
 
 /* ---------- Quotes / Testimonials ---------- */
