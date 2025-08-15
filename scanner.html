@@ -1,65 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Brain Scanner Project</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/tab_logo.png" type="image/png">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/main_logo.png" alt="A Helping Hand Technologies Logo"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brain Scanner Project (Archived) — Stone Technologies</title>
+    <link rel="icon" href="images/main_logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container row">
+        <div class="brand">
+          <a href="index.html"
+            ><img src="images/main_logo-removebg.png" alt="Stone Technologies logo"
+          /></a>
         </div>
-        <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-		<div class="sidebar">
-  			<ul>
-  				<li><a href="index.html">Home</a></li>
-   				<li><a href="about.html">About</a></li>
-  				<li><a href="designs.html">Designs</a></li>
-   				<li><a href="contact.html">Contact</a></li>
-   				<li><a href="scanner.html">Brain Scanner</a></li>
-  			</ul>
-		</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="designs.html">Designs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-				<li><a href="scanner.html">Brain Scanner</a></li>
-            </ul>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="designs.html">Projects</a>
+          <a href="robotics.html">Robotics</a>
+          <a href="store.html">Store</a>
+          <a href="contact.html">Contact</a>
+          <a class="active" href="scanner.html">Brain Scanner</a>
+          <a class="btn nav-cta" href="contact.html">Work with me</a>
         </nav>
-    </header>
-    <main class="brain-scanner">
-        <section class="intro">
-            <h1>Hey!</h1>
-            <p>I'm a student here leading a research project to turn a bicycle helmet into a brain scanner!</p>
-            <p>My name is Jordan Destafino,</p>
-            <p>I study <span class="strikethrough">neuroscience and electrical engineering</span> <span class="highlight">a lot of science</span> because I think this can work!</p>
-            <p>Even if you'd rather not give it a try just yet, feel free to message me and learn more about what this project is and how I'm trying to create talking dogs as an inventor of HPU</p>
-            <p>Jordan Destafino, (980)-549-0089 or <a href="mailto:jdestafi@highpoint.edu">jdestafi@highpoint.edu</a></p>
-            <div class="buttons">
-                <button onclick="location.href='index.html'">Main Website</button>
-                <button onclick="location.href='contact.html'">Contact Me</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 A Helping Hand Technologies. All rights reserved.</p>
-        <div class="social-media">
-            <a href="blank.html"><img src="images/facebook-icon.png" alt="Facebook"></a>
-			<a href="https://www.instagram.com/jdestafino/"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/@StoneTechLabs"><img src="images/youtube-icon.png" alt="YouTube"></a>
-            <a href="https://www.linkedin.com/in/jdestafino"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://github.com/JordanDest"><img src="images/github-icon.png" alt="GitHub"></a>
+        <button
+          class="burger"
+          data-burger
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+      <div class="drawer" data-drawer>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="designs.html">Projects</a>
+        <a href="robotics.html">Robotics</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+        <a href="scanner.html">Brain Scanner</a>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"
+            ><img src="images/instagram-icon.png" alt="Instagram" /></a
+          >
+          <a href="https://github.com/JordanDest"
+            ><img src="images/github-icon.png" alt="GitHub" /></a
+          >
+          <a href="https://www.linkedin.com/in/jdestafino"
+            ><img src="images/linkedin-icon.png" alt="LinkedIn" /></a
+          >
+          <a href="https://www.facebook.com/jdestafino"
+            ><img src="images/facebook-icon.png" alt="Facebook" /></a
+          >
+          <a href="https://www.youtube.com/@StoneTechLabs"
+            ><img src="images/youtube-icon.png" alt="Youtube" /></a
+          >
+          <button
+            data-close
+            class="btn btn--subtle btn--full"
+            style="margin-top: 0.5rem;"
+          >
+            Close
+          </button>
         </div>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container" style="max-width: 800px;">
+        <h1 style="font-size: var(--fs-800); margin: 0 0 0.25rem;">
+          Brain Scanner (Archived)
+        </h1>
+        <div class="card stack">
+          <p>
+            From 2023 through 2024 I poured countless hours into turning a
+            humble bicycle helmet into a brain scanner for dogs. The goal was
+            to capture neural and motion data with non‑invasive sensors and
+            decode basic intentions like movement or rest. In January 2025 I
+            chose to shelve the project after recognizing I achieved my optimal results after determining a mixture of overfitting and hardware limitations with the sensor system.
+          </p>
+          <p>
+            <strong>What I learned:</strong> Building the prototype taught me a
+            ton about hardware design, signal processing and the complexities
+            of working with living subjects (even when experimenting on myself). Those skills now inform my
+            robotics work and open experiments.
+          </p>
+          <p>
+            <strong>What’s next:</strong> The dream of communicating with
+            animals hasn’t gone away — it’s just on a slow build while I focus on
+            building robotic and automation solutions and exploring synthetic
+            biology. If you’d like to read more about the story behind the
+            helmet, check out the posts on my projects page.
+          </p>
+          <div class="stack-sm">
+            <a class="btn" href="designs.html">Back to projects</a>
+            <a class="btn btn--ghost" href="robotics.html">Learn about my robotics</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container row">
+        <small>© 2025 Stone Technologies</small>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"
+            ><img src="images/instagram-icon.png" alt="Instagram" /></a
+          >
+          <a href="https://github.com/JordanDest"
+            ><img src="images/github-icon.png" alt="GitHub" /></a
+          >
+          <a href="https://www.linkedin.com/in/jdestafino"
+            ><img src="images/linkedin-icon.png" alt="LinkedIn" /></a
+          >
+          <a href="https://www.facebook.com/jdestafino"
+            ><img src="images/facebook-icon.png" alt="Facebook" /></a
+          >
+          <a href="https://www.youtube.com/@StoneTechLabs"
+            ><img src="images/youtube-icon.png" alt="Youtube" /></a
+          >
+        </div>
+      </div>
     </footer>
-    <script src="script.js"></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
