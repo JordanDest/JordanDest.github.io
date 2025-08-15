@@ -1,134 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Helping Hand Technologies</title>
-    <link rel="stylesheet" href="style.css">
-     <link rel="icon" href="images/tab_logo.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stone Technologies — Robotics, Innovation &amp; Fun</title>
+    <link rel="icon" href="images/main_logo.png" type="image/png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Skip link for screen readers -->
+    <a class="visually-hidden" href="#main">Skip to content</a>
 
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": "A Helping Hand Technologies",
-      "url": "https://ahelpinghand.tech",
-      "logo": "https://ahelpinghand.tech/images/main_logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-980-549-0089",
-        "contactType": "customer service",
-        "areaServed": "US",
-        "availableLanguage": "English"
-      },
-      "sameAs": [
-        "https://www.youtube.com/@StoneTechLabs",
-        "https://www.linkedin.com/in/jdestafino",
-        "https://www.instagram.com/jdestafino/",
-        "https://github.com/JordanDest"
-      ]
-    }
-    </script>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/main_logo.png" alt="A Helping Hand Technologies Logo"></a>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container row">
+        <div class="brand">
+          <a href="index.html"
+            ><img
+              src="images/main_logo-removebg.png"
+              alt="Stone Technologies wolf logo"
+          /></a>
         </div>
-        <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <div class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="designs.html">Designs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="scanner.html">Brain Scanner</a></li>
-            </ul>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="designs.html">Designs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="scanner.html">Brain Scanner</a></li>
-            </ul>
+        <nav class="nav" aria-label="Primary">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="designs.html">Projects</a>
+          <a href="robotics.html">Robotics</a>
+          <a href="store.html">Store</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn nav-cta" href="contact.html">Work with me</a>
         </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Welcome to A Helping Hand Technologies</h1>
-            <p>Innovative solutions to fund my way towards building a neural engineering laboratory.</p>
-            <button onclick="location.href='about.html'">Learn More</button>
-            <button onclick="location.href='contact.html'">Contact Me</button>
-        </section>
-        <section class="features">
-            <h2>Our Key Features</h2>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="images/collar4.jpg" alt="Feature 1">
-                    <div class="text">
-                        <h3>Innovative Designs</h3>
-                        <p>Creative and open-source designs available for everyone.</p>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="images/poker.jpg" alt="Feature 2">
-                    <div class="text">
-                        <h3>Custom Solutions</h3>
-                        <p>Tailored solutions to meet your specific needs.</p>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="images/feature3.jpg" alt="Feature 3">
-                    <div class="text">
-                        <h3>Support & Guidance</h3>
-                        <p>Get support and guidance for implementing your projects.</p>
-                    </div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
-        </section>
-        <section class="testimonials">
-            <h2>What People<i> Probably </i>Say</h2>
-            <blockquote>
-                <p>"A Helping Hand Technologies provided excellent solutions that exceeded our expectations."</p>
-                <cite>- Happy Client</cite>
-            </blockquote>
-            <blockquote>
-                <p>"Innovative designs and top-notch support! Highly recommended."</p>
-                <cite>- Satisfied Customer</cite>
-            </blockquote>
-            <blockquote>
-                <p>"I wish I had an actual customer"</p>
-                <cite>- Owner of a 3 day old business while writing the website</cite>
-            </blockquote>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 A Helping Hand Technologies. All rights reserved.</p>
-        <div class="social-media">
-            <a href="blank.html"><img src="images/facebook-icon.png" alt="Facebook"></a>
-			<a href="https://www.instagram.com/jdestafino/"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/@StoneTechLabs"><img src="images/youtube-icon.png" alt="YouTube"></a>
-            <a href="https://www.linkedin.com/in/jdestafino"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://github.com/JordanDest"><img src="images/github-icon.png" alt="GitHub"></a>
+        <button
+          class="burger"
+          data-burger
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+      <!-- Mobile drawer -->
+      <div class="drawer" data-drawer>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="designs.html">Projects</a>
+        <a href="robotics.html">Robotics</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"
+            ><img
+              src="images/instagram-icon.png"
+              alt="Instagram"
+          /></a>
+          <a href="https://github.com/JordanDest"
+            ><img src="images/github-icon.png" alt="GitHub"
+          /></a>
+          <a href="https://www.linkedin.com/in/jdestafino"
+            ><img src="images/linkedin-icon.png" alt="LinkedIn"
+          /></a>
+          <a href="https://www.facebook.com/jdestafino"
+            ><img src="images/facebook-icon.png" alt="Facebook"
+          />
+          <a href="https://www.youtube.com/@StoneTechLabs"
+            ><img src="images/youtube-icon.png" alt="Youtube" /></a
+          ></a>
+          <button
+            data-close
+            class="btn btn--subtle btn--full"
+            style="margin-top: 0.5rem;"
+          >
+            Close
+          </button>
         </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main">
+      <!-- Hero section -->
+      <section class="hero">
+        <div
+          class="container grid"
+          style="grid-template-columns: 1.1fr 0.9fr; align-items: center;"
+        >
+          <div class="hero-card">
+            <h1>Building Robotics Tech &amp; Improbable Experimenting</h1>
+            <p>
+              I’m Jordan Destafino — a founder and student who cut his teeth on
+              neurobiology and electrical engineering. Today I build custom
+              robotics and automation systems for factories and small
+              businesses while still chasing the wild dream of talking dogs.
+              Alongside the serious tech, you’ll find me creating slightly-whimsical
+              robotics and technical projects that fund the journey.
+            </p>
+            <div class="stack-sm">
+              <a class="btn" href="about.html">Learn more about me</a>
+              <a class="btn btn--ghost" href="designs.html"
+                >Explore my projects</a
+              >
+            </div>
+          </div>
+          <div
+            class="hero-bg"
+            aria-hidden="true"
+            style="background-image: url('images/dogbrain2.jpg');"
+          ></div>
+        </div>
+      </section>
+
+      <!-- About highlight -->
+      <section class="section">
+        <div class="container grid" style="grid-template-columns: 0.7fr 1.3fr;">
+          <div>
+            <img
+              src="images/collar4.jpg"
+              alt="Older man smiling with his dog wearing a smart collar"
+              style="border-radius: var(--radius-lg); box-shadow: var(--elev-1);"
+            />
+          </div>
+          <div class="stack">
+            <h2>About Jordan</h2>
+            <p class="lead">
+              I grew up in North Carolina and attended High Point University for four years. My studies in
+              neuroscience, microcontrollers and machine learning set the
+              foundation for Stone Technologies, a holdings company where I
+              develop technologies that support my long‑term goal of canine
+              communication.
+            </p>
+            <p>
+              These days my focus is on designing intelligent robotic and
+              automation solutions for small businesses and factories,
+              exploring materials engineering and synthetic biology as a post-bac in grad school,
+              and teaching my dogs to play Uno. I’m still a student, eager to
+              learn from anyone who can show me a better way.
+            </p>
+            <a class="btn btn--subtle" href="about.html">Read my story</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus areas / cards -->
+      <section class="section">
+        <div class="container">
+          <h2>What I Do</h2>
+          <p class="lead">From robotics to practical chemistry, here’s how I spend my time.</p>
+          <div class="grid grid--3">
+            <!-- Robotic Solutions: one image slideshow -->
+            <article class="card">
+              <div class="slideshow" role="region" aria-label="Robotic Solutions images" style="border-radius: var(--radius);">
+                <div class="slide active">
+                  <img
+                    src="images/robotic_solutions.png"
+                    alt="Illustration of a robotic arm on an assembly line"
+                    style="width: 100%; height: auto; display: block;"
+                  />
+                </div>
+                <div class="controls" aria-label="Slideshow controls">
+                  <button class="btn btn--subtle" data-prev aria-label="Previous image">‹</button>
+                  <button class="btn" data-next aria-label="Next image">›</button>
+                </div>
+              </div>
+              <h3 style="margin-top: 1rem;">Robotic Solutions</h3>
+              <p class="muted">
+                I build intelligent robotic and automation systems that streamline workflows and modernise legacy equipment for factories and small businesses.
+              </p>
+              <a class="btn btn--subtle" href="robotics.html">Learn more</a>
+            </article>
+            <!-- Open Experiments: two images slideshow -->
+            <article class="card">
+              <div class="slideshow" role="region" aria-label="Open Experiments images" style="border-radius: var(--radius);">
+                <div class="slide active">
+                  <img
+                    src="images/uno_for_dogs.png"
+                    alt="Illustration of a dog playing Uno"
+                    style="width: 100%; height: auto; display: block;"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="images/main_logo-removebg.png"
+                    alt="Stone Technologies logo"
+                    style="width: 100%; height: auto; display: block;"
+                  />
+                </div>
+                <div class="controls" aria-label="Slideshow controls">
+                  <button class="btn btn--subtle" data-prev aria-label="Previous image">‹</button>
+                  <button class="btn" data-next aria-label="Next image">›</button>
+                </div>
+              </div>
+              <h3 style="margin-top: 1rem;">Open Experiments</h3>
+              <p class="muted">
+                Projects like teaching my dogs to play Uno and inventing an instant casting material show how curiosity and fun drive real innovation. Most of my designs are open‑source.
+              </p>
+              <a class="btn btn--subtle" href="designs.html">Browse experiments</a>
+            </article>
+            <!-- Stone Store: three images slideshow -->
+            <article class="card">
+              <div class="slideshow" role="region" aria-label="Stone Store images" style="border-radius: var(--radius);">
+                <div class="slide active">
+                  <img
+                    src="images/collar4.jpg"
+                    alt="Golden retriever wearing a smart collar"
+                    style="width: 100%; height: auto; display: block;"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="images/main_logo-removebg.png"
+                    alt="Stone Technologies logo"
+                    style="width: 100%; height: auto; display: block;"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="images/main_logo-removebg.png"
+                    alt="Stone Technologies logo"
+                    style="width: 100%; height: auto; display: block;"
+                  />
+                </div>
+                <div class="controls" aria-label="Slideshow controls">
+                  <button class="btn btn--subtle" data-prev aria-label="Previous image">‹</button>
+                  <button class="btn" data-next aria-label="Next image">›</button>
+                </div>
+              </div>
+              <h3 style="margin-top: 1rem;">Stone Store</h3>
+              <p class="muted">
+                Support the mission with merch. Custom T‑shirts and other goodies help fund research and keep the lights on in my workshop.
+              </p>
+              <a class="btn btn--subtle" href="store.html">Shop now</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest updates (carousel) -->
+      <section class="section">
+        <div class="container">
+          <div class="row" style="align-items:center; gap: 1rem;">
+            <h2 style="margin: 0;">Latest Updates</h2>
+            <div class="carousel-controls" aria-label="Carousel controls">
+              <button class="btn btn--subtle" data-prev aria-label="Previous slide">‹</button>
+              <button class="btn" data-next aria-label="Next slide">›</button>
+            </div>
+          </div>
+          <p class="lead">What I’ve been up to recently.</p>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track" data-track>
+              <article class="card">
+                <h3 style="margin-top: 0;">Spring 2025: Brain Scanner Shelved</h3>
+                <p class="muted">
+                  After almost a year of development, I decided to pause the brain
+                  scanner project in January 2025. The experience sharpened my
+                  engineering chops and inspired new directions — but for now
+                  it’s on the shelf while I focus on robotics and systems.
+                </p>
+              </article>
+              <article class="card">
+                <h3 style="margin-top: 0;">Summer 2025: Robotics &amp; Uno for Dogs</h3>
+                <p class="muted">
+                  I’ve been busy designing automation systems for local
+                  businesses and teaching my dogs the rules of Uno (with help
+                  from a custom card reader). Stay tuned as I develop more
+                  quirky prototypes and prepare to launch some merch.
+                </p>
+              </article>
+              <!-- Additional update cards to demonstrate carousel functionality -->
+              <article class="card">
+                <h3 style="margin-top: 0;">Shop Prep: Merch Drops</h3>
+                <p class="muted">
+                  Lining up designs, suppliers, and logistics for the Stone Store launch.
+                  Expect limited-run tees and maker gear that supports R&amp;D.
+                </p>
+              </article>
+              <article class="card">
+                <h3 style="margin-top: 0;">Factory Retrofit: Vision Pick-and-Place</h3>
+                <p class="muted">
+                  Prototyping a compact robot cell with a lightweight vision stack to
+                  modernize a legacy line. Early results look promising.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials / quotes -->
+      <section class="section">
+        <div class="container">
+          <h2>What People Say</h2>
+          <div class="grid grid--2">
+            <p class="quote">
+              “Jordan is the rare mix of playful creativity and technical
+              rigor. He built exactly what I needed and then some.” — Happy
+              Client
+            </p>
+            <p class="quote">
+              “Just a guy trying to talk to his dog—and inspiring others
+              along the way.” — Follower
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container row">
+        <small>© 2025 Stone Technologies</small>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"
+            ><img src="images/instagram-icon.png" alt="Instagram" /></a
+          >
+          <a href="https://github.com/JordanDest"
+            ><img src="images/github-icon.png" alt="GitHub" /></a
+          >
+          <a href="https://www.linkedin.com/in/jdestafino"
+            ><img src="images/linkedin-icon.png" alt="LinkedIn" /></a
+          >
+          <a href="https://www.facebook.com/jdestafino"
+            ><img src="images/facebook-icon.png" alt="Facebook" /></a
+          >
+          <a href="https://www.youtube.com/@StoneTechLabs"
+            ><img src="images/youtube-icon.png" alt="Youtube" /></a
+          >
+        </div>
+      </div>
     </footer>
-    <script src="script.js"></script>
-</body>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+  </body>
 </html>

@@ -22,6 +22,7 @@
   function init() {
     setupMobileNav();
     setupSlideshow();
+    setupCarousel();
     setupEmail();
   }
 
@@ -50,41 +51,74 @@
 
   // Simple slideshow used on homepage
   function setupSlideshow() {
-    const el = qs('.slideshow');
-    if (!el) return;
-    const slides = qsa('.slide', el);
-    if (slides.length === 0) return;
-    let i = 0;
-    const show = (n) => {
-      slides.forEach((s) => s.classList.remove('active'));
-      slides[n].classList.add('active');
-    };
-    show(i);
-    const next = () => {
-      i = (i + 1) % slides.length;
+    const slideshows = qsa('.slideshow');
+    if (!slideshows.length) return;
+    slideshows.forEach((el) => {
+      const slides = qsa('.slide', el);
+      if (slides.length === 0) return;
+      let i = 0;
+      const show = (n) => {
+        slides.forEach((s) => s.classList.remove('active'));
+        slides[n].classList.add('active');
+      };
       show(i);
-    };
-    let timer = setInterval(next, 6000);
-
-    // assign controls
-    qsa('[data-prev]', el).forEach((btn) =>
-      btn.addEventListener('click', () => {
-        clearInterval(timer);
-        i = (i - 1 + slides.length) % slides.length;
+      const next = () => {
+        i = (i + 1) % slides.length;
         show(i);
-        timer = setInterval(next, 6000);
-      })
-    );
-    qsa('[data-next]', el).forEach((btn) =>
-      btn.addEventListener('click', () => {
-        clearInterval(timer);
-        next();
-        timer = setInterval(next, 6000);
-      })
-    );
-    // pause on hover
-    el.addEventListener('mouseenter', () => clearInterval(timer));
-    el.addEventListener('mouseleave', () => (timer = setInterval(next, 6000)));
+      };
+      let timer = setInterval(next, 6000);
+
+      // assign controls within this slideshow
+      qsa('[data-prev]', el).forEach((btn) =>
+        btn.addEventListener('click', () => {
+          clearInterval(timer);
+          i = (i - 1 + slides.length) % slides.length;
+          show(i);
+          timer = setInterval(next, 6000);
+        })
+      );
+      qsa('[data-next]', el).forEach((btn) =>
+        btn.addEventListener('click', () => {
+          clearInterval(timer);
+          next();
+          timer = setInterval(next, 6000);
+        })
+      );
+      // pause on hover
+      el.addEventListener('mouseenter', () => clearInterval(timer));
+      el.addEventListener('mouseleave', () => (timer = setInterval(next, 6000)));
+    });
+  }
+
+  // Horizontally scrolling carousel for update cards
+  function setupCarousel() {
+    const carousels = qsa('[data-carousel]');
+    if (!carousels.length) return;
+    carousels.forEach((carousel) => {
+      const track = carousel.querySelector('[data-track]');
+      if (!track) return;
+      // find prev/next controls within the nearest section or container
+      let root = carousel.parentElement;
+      while (root && !root.matches('.section') && !root.matches('.container')) {
+        root = root.parentElement;
+      }
+      const prevBtn = root ? root.querySelector('[data-prev]') : null;
+      const nextBtn = root ? root.querySelector('[data-next]') : null;
+      if (!prevBtn || !nextBtn) return;
+      const step = () => carousel.clientWidth;
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: step(), behavior: 'smooth' });
+      });
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -step(), behavior: 'smooth' });
+      });
+      // keyboard support & focusability
+      carousel.setAttribute('tabindex', '0');
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') track.scrollBy({ left: step(), behavior: 'smooth' });
+        if (e.key === 'ArrowLeft') track.scrollBy({ left: -step(), behavior: 'smooth' });
+      });
+    });
   }
 
   // EmailJS integration for contact form

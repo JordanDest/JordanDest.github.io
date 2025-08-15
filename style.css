@@ -112,6 +112,8 @@ body {
   text-rendering: optimizeLegibility;
   display: flex;
   flex-direction: column;
+  /* Prevent unintended horizontal scrollbars from appearing */
+  overflow-x: hidden;
 }
 
 img,
@@ -379,6 +381,9 @@ header.site-header {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--elev-1);
+  /* Ensure slideshows fill their container cards */
+  width: 100%;
+  display: block;
 }
 .slide {
   display: none;
@@ -408,6 +413,67 @@ header.site-header {
   color: #fff;
   padding: 0.5rem 0.75rem;
   border-radius: 12px;
+}
+
+/* === Carousel (Latest Updates) === */
+.carousel {
+  position: relative;
+}
+
+.carousel-controls {
+  margin-left: auto;
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.carousel-controls .btn {
+  padding: 0.4rem 0.7rem;
+  line-height: 1;
+}
+
+.carousel-track {
+  --gap: var(--space-4, 1rem);
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+}
+
+.carousel-track > .card {
+  scroll-snap-align: start;
+  min-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .carousel-track > .card {
+    min-width: calc((100% - var(--gap)) / 2);
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel-track > .card {
+    min-width: calc((100% - (2 * var(--gap))) / 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-track > .card {
+    min-width: calc((100% - (3 * var(--gap))) / 4);
+  }
+}
+
+.carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* ---------- Quotes / Testimonials ---------- */
