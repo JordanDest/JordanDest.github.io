@@ -1,60 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - A Helping Hand Technologies</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/tab_logo.png" type="image/png">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/main_logo.png" alt="A Helping Hand Technologies Logo"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Jordan — Stone Technologies</title>
+    <link rel="icon" href="images/main_logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container row">
+        <div class="brand">
+          <a href="index.html"
+            ><img src="images/main_logo-removebg.png" alt="Stone Technologies logo"
+          /></a>
         </div>
-        <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <div class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="designs.html">Designs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="scanner.html">Brain Scanner</a></li>
-            </ul>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="designs.html">Designs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="scanner.html">Brain Scanner</a></li>
-            </ul>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+          <a href="designs.html">Projects</a>
+          <a href="robotics.html">Robotics</a>
+          <a href="store.html">Store</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn nav-cta" href="contact.html">Work with me</a>
         </nav>
-    </header>
-    <main>
-        <section class="about">
-            <h1>About Me</h1>
-            <img src="images/background1.jpg" alt="Jordan" class="profile-pic">
-            <p>Hey, I'm Jordan. I'm the guy who's creating a device that will let dogs talk. (Seriously)<br>
-            I'm a college student studying some incredible things, formally called neural engineering. This is just part of my plan to open and fund my own research facility (aka a dog's play heaven) as well as pay my way through college. As you'll notice, most of my designs are open and even have videos demonstrating how to build them; but if you'd rather purchase a ready-made product from me and help fund this dream of a reality I am making, feel free to contact me and I'll get right on it!<br><br>
-            P.S. Other mammals are on their way, I'm just partial to dogs :)</p>
-        </section>
-    </main>
-<footer>
-        <p>&copy; 2024 A Helping Hand Technologies. All rights reserved.</p>
-        <div class="social-media">
-            <a href="blank.html"><img src="images/facebook-icon.png" alt="Facebook"></a>
-			<a href="https://www.instagram.com/jdestafino/"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/@StoneTechLabs"><img src="images/youtube-icon.png" alt="YouTube"></a>
-            <a href="https://www.linkedin.com/in/jdestafino"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://github.com/JordanDest"><img src="images/github-icon.png" alt="GitHub"></a>
+        <button
+          class="burger"
+          data-burger
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+      <div class="drawer" data-drawer>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="designs.html">Projects</a>
+        <a href="robotics.html">Robotics</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"
+            ><img src="images/instagram-icon.png" alt="Instagram" /></a
+          >
+          <a href="https://github.com/JordanDest"
+            ><img src="images/github-icon.png" alt="GitHub" /></a
+          >
+          <a href="https://www.linkedin.com/in/jdestafino"
+            ><img src="images/linkedin-icon.png" alt="LinkedIn" /></a
+          >
+          <a href="https://www.facebook.com/jdestafino"
+            ><img src="images/facebook-icon.png" alt="Facebook" /></a
+          >
+          <a href="https://www.youtube.com/@StoneTechLabs"
+            ><img src="images/youtube-icon.png" alt="Youtube" /></a
+          >
+          <button
+            data-close
+            class="btn btn--subtle btn--full"
+            style="margin-top: 0.5rem;"
+          >
+            Close
+          </button>
         </div>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container" style="max-width: 780px;">
+        <h1 style="font-size: var(--fs-800); margin: 0 0 0.5rem;">
+          About Jordan Destafino
+        </h1>
+        <p class="lead">
+          Hey there! I’m the guy who’s trying to make talking dogs through neural
+          tech. Patent pending, I’ve started Stone Technologies as my holdings
+          company to develop the various ideas I dream up on the road to this
+          goal. My path weaves neurobiology, microcontrollers, machine learning and robotics into a single mission:
+          to make dogs talk; and along the way build convienent solutions that help real people.
+        </p>
+        <div class="card stack">
+          <p>
+            I established Stone Technologies as a holdings company to develop
+            technologies on the long road to canine communication. Over the
+            years I’ve built prototypes ranging from a helmet‑based brain
+            scanner to simple devices that read paw pressure. In
+            January 2025 I decided to shelve the brain scanner project — it
+            taught me a ton about sensing and signal processing, but my
+            attention has shifted toward robotics and automation.
+          </p>
+          <p>
+            Currently I’m deepening my mechatronic skills and setting up a
+            full‑scale workshop to take on more complex builds. With a plan in mind, I have my eye
+            on synthetic biology and materials engineering as the next
+            frontiers — think biocompatible interfaces and designer bacteria
+            for waste management. Eventually I intend to be a broadly
+            competent neural engineer, combining these disciplines into a toolset I can build the future with. 
+          </p>
+          <p>
+            Through Stone Technologies I also share light‑hearted experiments
+            like teaching my dogs to play Uno through reinforcement learning techniques and
+            inventing a bubble-wrap like cast that forms instantly via chemical
+            reaction without undue heat. These projects may seem frivolous,
+            but they reinforce my mantra that <em>life’s supposed to be fun</em>
+            — innovation happens when we stay playful.
+          </p>
+          <p>
+            I’m forever a student and always open in how I consider:
+            If you’d like to collaborate, commission a robotic system or just
+            chat about big ideas, don’t hesitate to reach out.
+          </p>
+          <div class="stack-sm">
+            <a class="btn" href="designs.html">See my projects</a>
+            <a class="btn btn--ghost" href="contact.html">Work with me</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container row">
+        <small>© 2025 Stone Technologies</small>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"
+            ><img src="images/instagram-icon.png" alt="Instagram" /></a
+          >
+          <a href="https://github.com/JordanDest"
+            ><img src="images/github-icon.png" alt="GitHub" /></a
+          >
+          <a href="https://www.linkedin.com/in/jdestafino"
+            ><img src="images/linkedin-icon.png" alt="LinkedIn" /></a
+          >
+          <a href="https://www.facebook.com/jdestafino"
+            ><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="https://www.youtube.com/@StoneTechLabs"
+            ><img src="images/youtube-icon.png" alt="Youtube" /></a
+          >
+        </div>
+      </div>
     </footer>
-	<script src="script.js"></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>

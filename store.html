@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stone Store — Stone Technologies</title>
+    <link rel="icon" href="images/main_logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="storestyle.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container row">
+        <div class="brand">
+          <a href="index.html"><img src="images/main_logo-removebg.png" alt="Stone Technologies logo" /></a>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="designs.html">Projects</a>
+          <a href="robotics.html">Robotics</a>
+          <a class="active" href="store.html">Store</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn nav-cta" href="contact.html">Work with me</a>
+        </nav>
+        <button class="burger" data-burger aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+      <div class="drawer" data-drawer>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="designs.html">Projects</a>
+        <a href="robotics.html">Robotics</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+          <a href="https://github.com/JordanDest"><img src="images/github-icon.png" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/jdestafino"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="https://www.facebook.com/jdestafino"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="https://www.youtube.com/@StoneTechLabs"><img src="images/youtube-icon.png" alt="Youtube" /></a>
+          <button data-close class="btn btn--subtle btn--full" style="margin-top: .5rem;">Close</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <div class="free-ship card">
+          <strong>Free shipping over $50</strong>
+          <span class="badge">Pop-up store (under construction)</span>
+        </div>
+
+        <h1 style="font-size: var(--fs-800); margin: 0 0 .25rem;">Stone Store</h1>
+        <p class="lead">
+          Choose size and quantity, then send the order — I’ll reply with a secure PayPal or credit-card invoice.
+          No payment is collected on this page.
+        </p>
+        <p class="uc-note">Temporary e‑mail checkout while the full processor is finalized.</p>
+
+        <div class="grid grid--2" id="product-grid">
+          
+    <article class="card product-card">
+      <img src="images/tshirt_design.png" alt="Navy t‑shirt with a stylised wolf and circuit motif" style="border-radius: var(--radius);" />
+      <h3>Circuit Wolf Tee</h3>
+      <p class="muted">Our signature design featuring the Stone Technologies wolf merged with circuitry. Printed on a soft navy cotton tee. Available in unisex sizes S–3XL.</p>
+      <p class="price">$26.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-circuit-wolf-tee">Size</label>
+        <select id="size-circuit-wolf-tee" data-id="circuit-wolf-tee" data-name="Circuit Wolf Tee" data-price="24.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="circuit-wolf-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="circuit-wolf-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/tshirt_dog.png" alt="White t‑shirt with a cartoon dog wearing a headset" style="border-radius: var(--radius);" />
+      <h3>Headset Pup Tee</h3>
+      <p class="muted">An animated take on my mission: a friendly pup sporting a neural headset. Printed on a lightweight white tee. Unisex sizes S–3XL.</p>
+      <p class="price">$24.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-headset-pup-tee">Size</label>
+        <select id="size-headset-pup-tee" data-id="headset-pup-tee" data-name="Headset Pup Tee" data-price="24.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="headset-pup-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="headset-pup-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/etropyenthusiast.png" alt="Beige t‑shirt design with a wide‑eyed character blasting from an energetic explosion, embracing a playful take on entropy." style="border-radius: var(--radius);" />
+      <h3>Entropy Tee</h3>
+      <p class="muted">A wide‑eyed figure rides an explosion on this light cotton tee, ideal for physics lovers who know that chaos can be beautiful. Unisex sizes S–3XL.</p>
+      <p class="price">$25.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-entropy-tee">Size</label>
+        <select id="size-entropy-tee" data-id="entropy-tee" data-name="Entropy Tee" data-price="22.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="entropy-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="entropy-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/halflives2.png" alt="Grey t‑shirt with a bold radiation symbol splitting into a smaller particle, playfully referring to radioactive decay." style="border-radius: var(--radius);" />
+      <h3>Half‑Lives Tee</h3>
+      <p class="muted">This soft grey tee features a stylised radiation icon and a witty reference to half‑life science. Perfect for chemists and physics fans. Unisex sizes S–3XL.</p>
+      <p class="price">$26.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-half-lives-tee">Size</label>
+        <select id="size-half-lives-tee" data-id="half-lives-tee" data-name="Half‑Lives Tee" data-price="24.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="half-lives-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="half-lives-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/misalignment.webp" alt="Grey t‑shirt with a bold robot showing a half sided smile and decelptive malignment." style="border-radius: var(--radius);" />
+      <h3>Misalignment Tee</h3>
+      <p class="muted">A funny shirt on the state of deceptive misalignment in current AI techniques. Unisex sizes S–3XL.</p>
+      <p class="price">$26.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-new-unnamed-tee">Size</label>
+        <select id="size-new-unnamed-tee" data-id="new-unnamed-tee" data-name="New Unnamed Tee" data-price="24.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="new-unnamed-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="new-unnamed-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/lawdog.png" alt="Light t‑shirt showing a suited golden retriever lawyer with glasses and a gavel, humorously advertising pet legal services." style="border-radius: var(--radius);" />
+      <h3>Attorney at Paw Tee</h3>
+      <p class="muted">A clever canine in a business suit champions pet rights on this cream tee. A fun gift for dog lovers and legal buffs alike. Unisex sizes S–3XL.</p>
+      <p class="price">$26.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-attorney-at-paw-tee">Size</label>
+        <select id="size-attorney-at-paw-tee" data-id="attorney-at-paw-tee" data-name="Attorney at Paw Tee" data-price="26.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="attorney-at-paw-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="attorney-at-paw-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/predicts.png" alt="Plain light beige t‑shirt with a subtle heather texture laid flat on a neutral background, representing the &#x27;Prediction&#x27; tee design." style="border-radius: var(--radius);" />
+      <h3>Prediction Tee</h3>
+      <p class="muted">A friendly robot peers into a crystal ball on this vintage‑inspired cream tee, making a tongue‑in‑cheek prediction about your new favourite shirt. Unisex sizes S–3XL.</p>
+      <p class="price">$23.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-prediction-tee">Size</label>
+        <select id="size-prediction-tee" data-id="prediction-tee" data-name="Prediction Tee" data-price="23.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="prediction-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="prediction-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/codewetrust.png" alt="Plain cream t‑shirt laid flat on a neutral background, representing the &#x27;In Code&#x27; design." style="border-radius: var(--radius);" />
+      <h3>In Code Tee</h3>
+      <p class="muted">Celebrate your love of code with this cream cotton tee sporting a microchip, binary art and a playful hardware pun. Soft unisex fit in sizes S–3XL.</p>
+      <p class="price">$25.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-in-code-tee">Size</label>
+        <select id="size-in-code-tee" data-id="in-code-tee" data-name="In Code Tee" data-price="25.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="in-code-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="in-code-tee">Add to Cart</button>
+    </article>
+    <article class="card product-card">
+      <img src="images/.png" alt="Grey t‑shirt with a bold radiation symbol splitting into a smaller particle, playfully referring to radioactive decay." style="border-radius: var(--radius);" />
+      <h3>New Unnamed Tee</h3>
+      <p class="muted">This soft grey tee features a stylised radiation icon and a witty reference to half‑life science. Perfect for chemists and physics fans. Unisex sizes S–3XL.</p>
+      <p class="price">$24.00</p>
+      <div class="variant-controls">
+        <label class="visually-hidden" for="size-new-unnamed-tee">Size</label>
+        <select id="size-new-unnamed-tee" data-id="new-unnamed-tee" data-name="New Unnamed Tee" data-price="24.00">
+          <option value="">Select size</option>
+          <option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+        </select>
+        <input aria-label="Quantity" type="number" min="1" max="10" value="1" data-qty-for="new-unnamed-tee" />
+      </div>
+      <button class="btn add-to-cart" data-id="new-unnamed-tee">Add to Cart</button>
+    </article>
+        </div>
+
+        <section id="cart" class="section" aria-labelledby="cart-title">
+          <h2 id="cart-title" style="font-size: var(--fs-700);">Your Cart</h2>
+          <ul id="cart-items" class="cart-items muted">
+            <li>Cart is empty.</li>
+          </ul>
+
+          <div class="totals" id="totals" style="display:none;">
+            <div class="row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+            <div class="row"><span id="free-ship-msg" class="muted">Add $50.00 for free shipping</span><span class="badge" id="free-badge" style="display:none;">Free shipping unlocked</span></div>
+            <div class="row grand"><span>Total (est.)</span><span id="grand">$0.00</span></div>
+          </div>
+
+          <div id="checkout" class="card checkout-card" style="display:none; margin-top: .75rem;">
+            <form id="checkout-form">
+              <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                <div>
+                  <label for="cust-name">Name</label>
+                  <input id="cust-name" required />
+                </div>
+                <div>
+                  <label for="cust-email">Email</label>
+                  <input id="cust-email" type="email" required />
+                </div>
+              </div>
+              <div>
+                <label for="cust-address">Shipping Address</label>
+                <textarea id="cust-address" rows="3" required></textarea>
+              </div>
+              <div>
+                <label for="pay-pref">Payment Preference</label>
+                <select id="pay-pref" required>
+                  <option value="">Choose…</option>
+                  <option value="paypal">PayPal invoice</option>
+                  <option value="card">Credit card invoice</option>
+                </select>
+                <p class="hint">I’ll email a secure invoice. You won’t enter payment here.</p>
+              </div>
+              <div class="order-actions">
+                <button type="submit" class="btn">Send Order via Email</button>
+                <button type="button" class="btn btn--subtle" id="copy-order">Copy Order Text</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container row">
+        <small>© 2025 Stone Technologies</small>
+        <div class="social">
+          <a href="https://www.instagram.com/jdestafino/"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+          <a href="https://github.com/JordanDest"><img src="images/github-icon.png" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/jdestafino"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@StoneTechLabs"><img src="images/youtube-icon.png" alt="Youtube" /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+      (function () {
+        const $ = (s, r=document) => r.querySelector(s);
+        const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+        const THRESHOLD = 50;
+        const currency = v => '$' + (Math.round(v * 100) / 100).toFixed(2);
+        const cart = JSON.parse(localStorage.getItem('stone_cart_v2') || '{}');
+
+        function keyFor(id, size) { return id + '|' + size; }
+
+        function add(id) {
+          const sizeSel = document.querySelector('select[data-id="' + id + '"]');
+          const name = sizeSel?.dataset.name || id;
+          const price = parseFloat(sizeSel?.dataset.price || '0');
+          const size = sizeSel?.value || '';
+          const qtyInput = document.querySelector('input[data-qty-for="' + id + '"]');
+          const qty = Math.max(1, parseInt(qtyInput?.value || '1', 10));
+          if (!size) { alert('Please select a size first.'); return; }
+          const k = keyFor(id, size);
+          if (!cart[k]) cart[k] = { id, name, size, price, qty };
+          else cart[k].qty += qty;
+          save(); render();
+        }
+
+        function changeQty(k, delta) { if (!cart[k]) return; cart[k].qty += delta; if (cart[k].qty <= 0) delete cart[k]; save(); render(); }
+        function removeItem(k) { delete cart[k]; save(); render(); }
+        function save() { localStorage.setItem('stone_cart_v2', JSON.stringify(cart)); }
+
+        function buildLines() {
+          let lines = [];
+          Object.values(cart).forEach(it => lines.push('- ' + it.name + ' (' + it.size + ') x ' + it.qty + ' — ' + currency(it.price) + ' ea'));
+          return lines;
+        }
+        function totals() { let subtotal = 0; Object.values(cart).forEach(it => subtotal += it.price * it.qty); return { subtotal, grand: subtotal }; }
+
+        function render() {
+          const ul = $('#cart-items');
+          const t = $('#totals');
+          const co = $('#checkout');
+          const keys = Object.keys(cart);
+          if (!keys.length) { ul.innerHTML = '<li>Cart is empty.</li>'; t.style.display='none'; co.style.display='none'; return; }
+          ul.innerHTML = '';
+          keys.forEach(k => {
+            const it = cart[k];
+            const li = document.createElement('li');
+            li.className = 'cart-item';
+            li.innerHTML = `
+              <div>
+                <div><strong>${it.name}</strong></div>
+                <div class="item-meta">Size: ${it.size} · ${currency(it.price)} ea</div>
+              </div>
+              <div class="item-actions" aria-label="Quantity controls for ${it.name} size ${it.size}">
+                <button class="qty-btn" data-k="${k}" data-d="-1" aria-label="Decrease quantity">–</button>
+                <span>${it.qty}</span>
+                <button class="qty-btn" data-k="${k}" data-d="1" aria-label="Increase quantity">+</button>
+                <button class="remove-btn" data-k="${k}" aria-label="Remove item">Remove</button>
+              </div>`;
+            ul.appendChild(li);
+          });
+          const { subtotal, grand } = totals();
+          $('#subtotal').textContent = currency(subtotal);
+          $('#grand').textContent = currency(grand);
+          t.style.display = 'grid';
+          const remain = Math.max(0, THRESHOLD - subtotal);
+          if (remain <= 0) { $('#free-ship-msg').textContent = 'You unlocked free shipping'; $('#free-badge').style.display = 'inline-flex'; }
+          else { $('#free-ship-msg').textContent = 'Add ' + currency(remain) + ' for free shipping'; $('#free-badge').style.display = 'none'; }
+          co.style.display = 'block';
+        }
+
+        function orderText() {
+          const lines = buildLines();
+          const { subtotal, grand } = totals();
+          return [
+            'Stone Store Order', '',
+            ...lines, '',
+            'Subtotal: ' + currency(subtotal),
+            'Free shipping over $' + THRESHOLD + ' will be applied if eligible.', '',
+            'Ship To: ' + ($('#cust-name').value || '[Name]'),
+            ($('#cust-address').value || '[Address]'), '',
+            'Contact Email: ' + ($('#cust-email').value || '[Email]'),
+            'Payment Preference: ' + ($('#pay-pref').value || '[PayPal or Card]'),
+          ].join('%0D%0A');
+        }
+        function plainOrderText() { return decodeURIComponent(orderText()).replace(/%0D%0A/g, '\n'); }
+
+        document.addEventListener('click', (e) => {
+          const addBtn = e.target.closest('.add-to-cart');
+          if (addBtn) add(addBtn.dataset.id);
+          if (e.target.matches('.qty-btn')) { changeQty(e.target.getAttribute('data-k'), parseInt(e.target.getAttribute('data-d'),10)); }
+          if (e.target.matches('.remove-btn')) { removeItem(e.target.getAttribute('data-k')); }
+        });
+
+        $('#checkout-form')?.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const mailto = [
+            'mailto:stonetechlabs@gmail.com',
+            '?subject=' + encodeURIComponent('Stone Store Order — ' + ($('#cust-name').value || 'New Customer')),
+            '&body=' + orderText()
+          ].join('');
+          window.location.href = mailto;
+        });
+        $('#copy-order')?.addEventListener('click', async () => {
+          try { await navigator.clipboard.writeText(plainOrderText()); alert('Order text copied.'); }
+          catch { alert('Could not copy automatically. Your email app will open with the order pre-filled after you submit.'); }
+        });
+
+        $$('.add-to-cart').forEach(btn => {
+          const id = btn.dataset.id;
+          const qtyInput = document.querySelector('[data-qty-for="' + id + '"]');
+          qtyInput?.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') add(id); });
+        });
+
+        render();
+      } )();
+    </script>
+  </body>
+</html>
